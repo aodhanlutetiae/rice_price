@@ -20,6 +20,13 @@ jobs:
                 python-version: "3.9"
             
             - name: Install depenedncies
-              run: 
+              run: pip install requests beautifulsoup4
+            
+            #run the script
+            - name: Run scraping script
+              run: python amazon_price_of_rice.ipynb
+            
+            - name: commit files
+              run: amazon_price_of_rice.ipynb
                 
 

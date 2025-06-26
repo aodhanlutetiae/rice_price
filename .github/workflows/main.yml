@@ -1,0 +1,25 @@
+name: Run scraper
+on:
+    workflow_dispatch:
+    schedule:
+        #9:00am everyday
+        - cron: "0 9 * * *"
+
+jobs:
+    Scrape:
+        #setting virtual env to the latest ver of Ubuntu
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v2
+            
+            - name: Set up Python
+              uses: actions/setup-python@v2
+              with:
+                python-version: "3.9"
+            
+            - name: Install depenedncies
+              run: 
+                
+

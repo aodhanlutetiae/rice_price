@@ -24,9 +24,19 @@ jobs:
             
             #run the script
             - name: Run scraping script
-              run: python amazon_price_of_rice.ipynb
+              run: jupyter execute amazon_price_of_rice.ipynb
             
             - name: commit files
               run: amazon_price_of_rice.ipynb
                 
+            - name: Add and commit
+              id: add_commit
+              uses: EndBug/add-and-commit@v8
+              with:
+                committer_name: Automated
+                committer_email: actions@users.noreply.github.com
+                message: "Latest data"
+            
+            - name: Push	
+              run: git push
 

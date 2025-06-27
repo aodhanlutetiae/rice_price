@@ -24,7 +24,7 @@ jobs:
             
             #run the script
             - name: Run scraping script
-              run: jupyter execute amazon_price_of_rice.ipynb
+              run: scrape.py
             
             - name: commit files
               run: amazon_price_of_rice.ipynb

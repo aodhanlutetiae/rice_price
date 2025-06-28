@@ -35,8 +35,8 @@
 #               with:
 #                 committer_name: Automated
 #                 committer_email: actions@users.noreply.github.com
-                message: "Latest data"
+            #     message: "Latest data"
             
-            - name: Push	
-              run: git push
+            # - name: Push	
+            #   run: git push
 

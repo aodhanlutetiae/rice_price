@@ -1,40 +1,40 @@
-name: Run scraper
-on:
-    workflow_dispatch:
-    schedule:
-        #9:00am everyday
-        - cron: "50 13 * * *"
+# name: Run scraper
+# on:
+#     workflow_dispatch:
+#     schedule:
+#         #9:00am everyday
+#         - cron: "50 13 * * *"
 
-jobs:
-    Scrape:
-        #setting virtual env to the latest ver of Ubuntu
-        runs-on: ubuntu-latest
+# jobs:
+#     Scrape:
+#         #setting virtual env to the latest ver of Ubuntu
+#         runs-on: ubuntu-latest
 
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v2
+#         steps:
+#             - name: Checkout repository
+#               uses: actions/checkout@v2
             
-            - name: Set up Python
-              uses: actions/setup-python@v2
-              with:
-                python-version: "3.9"
+#             - name: Set up Python
+#               uses: actions/setup-python@v2
+#               with:
+#                 python-version: "3.9"
             
-            - name: Install depenedncies
-              run: pip install requests beautifulsoup4
+#             - name: Install depenedncies
+#               run: pip install requests beautifulsoup4
             
-            #run the script
-            - name: Run scraping script
-              run: python scrape.py
+#             #run the script
+#             - name: Run scraping script
+#               run: python scrape.py
             
-            - name: commit files
-              run: amazon_price_of_rice.ipynb
+#             - name: commit files
+#               run: amazon_price_of_rice.ipynb
                 
-            - name: Add and commit
-              id: add_commit
-              uses: EndBug/add-and-commit@v8
-              with:
-                committer_name: Automated
-                committer_email: actions@users.noreply.github.com
+#             - name: Add and commit
+#               id: add_commit
+#               uses: EndBug/add-and-commit@v8
+#               with:
+#                 committer_name: Automated
+#                 committer_email: actions@users.noreply.github.com
                 message: "Latest data"
             
             - name: Push	

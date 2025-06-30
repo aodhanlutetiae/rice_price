@@ -16,7 +16,7 @@ import csv
 time=datetime.now()
 formatted = time.strftime("%Y-%m-%d %H:%M:%S")
 
-with open(test.csv, 'a') as f:
+with open('amazon_rice_price.csv', 'a') as f:
     f.write(formatted)
 
 #export to CSV

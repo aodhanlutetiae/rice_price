@@ -3,7 +3,7 @@ on:
     workflow_dispatch:
     schedule:
         #9:00am everyday
-        - cron: "50 13 * * *"
+        - cron: "0 9 * * *"
 
 jobs:
     Scrape:
@@ -28,6 +28,7 @@ jobs:
             
             - name: commit files
               run: amazon_price_of_rice.ipynb
+              # run: python scrape.py
                 
             - name: Add and commit
               id: add_commit

@@ -15,8 +15,9 @@ header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/5
 res=requests.get(url, headers=header)
 soup=BeautifulSoup(res.text, "html.parser")
 brand=soup.find("span", class_="a-size-large product-title-word-break").text.strip()
+brand2 = "string to test"
 with open('amazon_rice_price.csv', 'a') as f:
-    f.write(brand)
+    f.write(brand2)
     
 # brand=soup.find("span", class_="a-size-large product-title-word-break").text.strip()
 # price=soup.find("span", class_="a-price-whole").text

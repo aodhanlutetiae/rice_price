@@ -14,8 +14,9 @@ import csv
 # price=soup.find("span", class_="a-price-whole").text
 
 time=datetime.now()
+formatted = time.strftime("%Y-%m-%d %H:%M:%S")
 
-with open(time, 'a') as f:
+with open(formatted, 'a') as f:
     f.write(time)
 
 #export to CSV

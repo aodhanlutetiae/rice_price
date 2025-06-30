@@ -14,7 +14,7 @@ url="https://www.amazon.co.jp/%E9%AD%9A%E6%B2%BC%E7%94%A3%E3%82%B3%E3%82%B7%E3%8
 header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36"}
 res=requests.get(url, headers=header)
 soup=BeautifulSoup(res.text, "html.parser")
-brand=soup.find("span", class_="a-size-large product-title-word-break").text.strip()
+# brand=soup.find("span", class_="a-size-large product-title-word-break").text.strip()
 brand2 = "string to test"
 with open('amazon_rice_price.csv', 'a') as f:
     f.write(brand2)

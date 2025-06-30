@@ -15,7 +15,7 @@ import csv
 
 time=datetime.now()
 
-with open(filename, 'a') as f:
+with open(time, 'a') as f:
     f.write(time)
 
 #export to CSV

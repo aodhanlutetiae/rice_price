@@ -3,9 +3,7 @@ on:
     workflow_dispatch:
     schedule:
         #9:00am everyday
-        # - cron: "0 9 * * *"
-        # On the hour, every hour
-        - cron: "0 * * * *"
+        - cron: "0 9 * * *"
 
 jobs:
     Scrape:
